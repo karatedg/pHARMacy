@@ -10,7 +10,8 @@
     font-family: "Poppins", sans-serif;
 }
 
-body {
+body,
+html {
     background-color: #0000;
     font-family: "Poppins", sans-serif;
     margin: 0;
@@ -20,13 +21,19 @@ body {
 }
 
 header {
-    background-color: black;
-    padding: 10px 20px;
-    text-align: right;
-    display: flex;
-    transition: transform 0.3s ease-in-out;
+    background-color: linear-gradient(to right,#0000 0%, #0000 100%);
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border-bottom-left-radius: 120px;
+    border-bottom-right-radius: 120px;
 }
+
 
 header img {
     max-width: auto;
