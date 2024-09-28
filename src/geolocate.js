@@ -18,7 +18,9 @@ function doSomething(lat, lon) {
 }
 
 function fetchNearbyHospitals(lat, lon) {
-    const url = `https://discover.search.hereapi.com/v1/discover?at=${lat},${lon}&q=hospital&limit=5&apiKey=${apiKey}`;
+    const url = `https://discover.search.hereapi.com/v1/discover?at=${lat},${lon}&q=pharmacy&limit=5&apiKey=${apiKey}`;
+
+    console.log(`https://discover.search.hereapi.com/v1/discover?at=${lat},${lon}&q=pharmacy&limit=5&apiKey=${apiKey}`)
 
     fetch(url)
         .then(response => response.json())
@@ -34,7 +36,11 @@ function fetchNearbyHospitals(lat, lon) {
 
             hospitals.forEach(hospital => {
                 const listItem = document.createElement('li');
-                listItem.textContent = hospital.title; // Display the hospital name
+                const phoneLink = document.createElement('a');
+                phoneLink.href = `tel:${hospital.contacts[0].phone[0].value}`
+                phoneLink.textContent = hospital.contacts[0].phone[0].value
+                listItem.textContent = (`${hospital.title}: `); // Display the hospital name
+                listItem.appendChild(phoneLink)
                 hospitalList.appendChild(listItem);
             });
         })
