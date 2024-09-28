@@ -3,19 +3,21 @@ async function getActiveIngredients(drugName) {
     const query = `search=active_ingredient:\"${drugName}\"`
 
     try {
+        console.log("Fetching data...");
         const response = await fetch(`${baseURL}?${query}`);
         
         if (!response.ok) {
-            throw new Error(`Error: ${response.statusText}`);
+            throw new Error(`Error in fetch`);
         }
 
-        const data = await response.json();
+        const responseData = await response.json();
 
-        console.log(data)
+        console.log(responseData)
         
-        if (data) {
-            const activeIngredients = data.results[0].spl_product_data_elements;
-            return activeIngredients;
+        if (responseData) {
+            const returning = responseData.results[0].spl_product_data_elements[0];
+            console.log(returning)
+            return returning;
         } else {
             throw new Error('No active ingredients found.');
         }
@@ -26,8 +28,5 @@ async function getActiveIngredients(drugName) {
 }
 
 //takes in the result from above as a string and parses it into an array by splitting it by commas.
-function parseIngredients(ingredients) {
-    return ingredients.split(',');
-}
 
 export default getActiveIngredients;
