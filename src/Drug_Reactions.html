@@ -93,6 +93,18 @@
             <p id="ocrText">Your OCR result will appear here</p>
         </div>
 
+        <div class = "box">
+            <h1>Medication Image Upload 2</h1>
+             <p style="text-align: center">Make sure your image is clear and legible before submitting for best results.</p>
+               <form id="orcform2">
+                   <label for="imageFile2">Upload your 2<sup>nd</sup> image:</label>
+                   <input type="file" id="imageFile2" accept="image/*" required>
+               </form>
+               <h2>OCR Result:</h2>
+               <p id="ocrText2">Your OCR 2 result will appear here</p>
+           </div>
+           <div class="box">
+
         
         <div class="fox">
         <h1>Do they overlap?</h1>
@@ -100,18 +112,7 @@
         
         </div>
 </div>
-        <div class = "box">
-         <h1>Medication Image Upload 2</h1>
-          <p style="text-align: center">Make sure your image is clear and legible before submitting for best results.</p>
-            <form id="orcform2">
-                <label for="imageFile2">Upload your 2<sup>nd</sup> image:</label>
-                <input type="file" id="imageFile2" accept="image/*" required>
-                <button id="submitImage2" type="button">Submit</button>
-            </form>
-            <h2>OCR Result:</h2>
-            <p id="ocrText2">Your OCR 2 result will appear here</p>
-        </div>
-        <div class="box">
+        
         <h1 style = "background-color: transparent">Do they overlap?</h1>
     </div>
     <script type="module" src="index.js"></script>
@@ -119,16 +120,21 @@
     
     
     <div class="box">
-            <h1>Geolocation Example</h1>
-    <button id="getLocation">Get Location</button>
-    <p id="output"></p>
-    <div id="hospitals">
-        <h2>Nearby Hospitals:</h2>
-        <ul id="hospitalList"></ul>
+        <h1>Geolocation Example</h1>
+        <button id="getLocation">Get Location</button>
+        <p id="output"></p>
+        <div id="hospitals">
+            <h2>Nearby Hospitals:</h2>
+            <ul id="hospitalList"></ul>
         </div>
-        </div>
+        <script src="geolocate.js"></script>
+    </div>
         
     <p class="footer" style="text-align: center">Make sure your image is clear and legible before submitting for best results.</p>
+    
+    
+    <script type="module" src="src/index.js"></script>
+
 </body> 
 
 </html>
