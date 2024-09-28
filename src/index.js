@@ -81,7 +81,10 @@ async function runImageCheck(event) {
 
         if (conflict1 || conflict2) {
             console.log("Conflict confirmed.");
-            document.getElementById('overlap-text').textContent = "Conflict detected.";
+            document.getElementById('overlap-text').textContent = "These drugs interact with each other. Please exercise caution or check with a pharmacy.";
+        } else {
+            console.log("No conflicts detected.");
+            document.getElementById('overlap-text').textContent = "These drugs don't interact with each other";
         }
 
 
