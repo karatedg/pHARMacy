@@ -29,13 +29,13 @@ header {
     transition: all 0.3s ease;
     border-bottom-left-radius: 120px;
     border-bottom-right-radius: 120px;
-    height: 150px;
-    overflow: hidden;
+    height: 200px;
+    
 }
 
 header img {
-    width: 80%;
-    height: 80%;
+    width: 50%;
+    height: 50%;
     object-fit: cover;
     object-position: center;
 }
@@ -87,8 +87,7 @@ header img {
 }
 
 #submitImage {
-    background-color: #964B00;
-    color: white;
+    color: black;
     border: 2px solid black;
     margin: auto;
     width: 10vw; /* Adjusted for better side-by-side layout */
@@ -100,7 +99,7 @@ header img {
 }
 
 .button-container {
-    background-color: #DFCAA0;
+
     border: 2px solid black;
     margin: auto;
     width: 10vw; /* Adjusted for better side-by-side layout */
@@ -113,11 +112,30 @@ header img {
 
 .invisibleBox{
     background-color: transparent;
-            border: 2px solid black;
-            margin: auto;
-            width: 30vw; /* Adjusted for better side-by-side layout */
-            height: auto;
-            padding: 20px;
-            font-size: 24pt;
-            text-align: center;
+    border: 2px solid black;
+    margin: auto;
+    width: 30vw; /* Adjusted for better side-by-side layout */
+    height: auto;
+    padding: 20px;
+    font-size: 24pt;
+    text-align: center;
+}
+
+.submitImage {
+    display: inline-block;
+    padding: 12px 40px;
+    background: #0056b3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+.submitImage:hover{
+    background: #00457c;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
