@@ -30,6 +30,18 @@ header {
     border-bottom-right-radius: 120px;
 }
 
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  header nav ul li {
+    display: inline;
+    margin-right: 20px;
+ }
 
 header img {
     max-width: auto;
