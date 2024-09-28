@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Reactions</title>
+    <style>
+        body {background-color:#FFFDD0}
+        .file {
+            background-color: #DFCAA0;
+            border: 2px solid black;
+            margin: 20px;
+            width: 32vw;
+            height: auto;
+            padding: 20px;
+            font-size: 24pt;
+        }
+        .heading p {
+            font-size: 48pt;
+            font-family: Verdana, "Times New Roman";
+            color: #964B00;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <p>Drug Compatibility Tester</p>
+    </div>
+
+    <div class="file">
+        <label for="Drug_File">Choose an image of your prescription:</label>
+        <input type="file" id="Drug_File" name="Drug_File" accept="image/png, image/jpeg" />
+    </div>
+
+    <button id="getLocation">Get Nearby Hospitals</button>
+    <p id="output"></p>
+    <ul id="hospitalList"></ul>
+
+    <script src="geolocate.js"></script>
+</body>
+
+</html>
