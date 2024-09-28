@@ -17,7 +17,7 @@ html {
 }
 
 header {
-    background-color: linear-gradient(to right,#0000 0%, #0000 100%);
+    background: black;
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -29,6 +29,10 @@ header {
     transition: all 0.3s ease;
     border-bottom-left-radius: 120px;
     border-bottom-right-radius: 120px;
+}
+
+body {
+    padding-top: 100px;
 }
 
 
