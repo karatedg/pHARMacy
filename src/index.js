@@ -3,10 +3,12 @@ import getActiveIngredients from './drugLookup.js'
 
 submitSetup()
 
+let drugInfo
 
-const drugInfo = await getActiveIngredients('aspirin').then((data) => {
+getActiveIngredients('aspirin').then((activeIngredients) => {
     console.log("Drug Info Found!");
-
+    console.log(drugInfo)
+    drugInfo = activeIngredients
 })
 
-console.log(drugInfo)
+
