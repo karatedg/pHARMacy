@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Reactions</title>
+
+    <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
+    <link rel="stylesheet" href="reactions.css">
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="reactions.js" <span><h1><img src="Pharmacy logo.png" alt="logo"></span></h1></a>
+    </div>
+
+
+    <div class="heading">
+       <p>Drug Compatibility Tester</p>
+    </div>
+    
+    <div class="container">
+        <div class="box">
+            <h1>Medication Image Upload</h1>
+            <p style="text-align: center">Make sure your image is clear and legible before submitting for best results.</p>
+            <form id="ocrForm">
+                <label for="imageFile">Upload an Image:</label>
+                <input type="file" id="imageFile" accept="image/*" required>
+            </form>
+            <h2>OCR Result:</h2>
+            <p id="ocrText">Your OCR result will appear here</p>
+        </div>
+    
+        <div class="button-container box">
+            <button id="submitImage" type="button">Submit</button>
+        </div>
+    
+        <div class = "box">
+            <h1>Medication Image Upload 2</h1>
+            <p style="text-align: center">Make sure your image is clear and legible before submitting for best results.</p>
+            <form id="orcform2">
+                <label for="imageFile2">Upload your 2<sup>nd</sup> image:</label>
+                <input type="file" id="imageFile2" accept="image/*" required>
+            </form>
+            <h2>OCR Result:</h2>
+            <p id="ocrText2">Your OCR 2 result will appear here</p>
+        </div>
+            
+    
+            
+        <div class="fox">
+            <h1>Do they interact?</h1>
+            <p id="overlap-text"></p>
+        </div>
+    </div>
+    
+    <script type="module" src="index.js"></script>
+    <br /> 
+        
+        
+    <div class="box">
+        <h1>Geolocation Example</h1>
+        <button id="getLocation">Get Location</button>
+        <p id="output"></p>
+        <div id="hospitals">
+           <h2>Nearby Pharmacies:</h2>
+            <ul id="hospitalList"></ul>
+        </div>
+        <script src="geolocate.js"></script>
+    </div>
+            
+    <p class="footer" style="text-align: center">Make sure your image is clear and legible before submitting for best results.</p>
+        
+        
+    <script type="module" src="index.js"></script>
+    
+</body> 
+    
+</html>
