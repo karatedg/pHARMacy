@@ -24,7 +24,7 @@
             display: flex;
             flex-direction: row; /* Ensures horizontal alignment */
             justify-content: space-between; /* Makes sure boxes are spaced evenly */
-            gap: 20px; /* Adds space between the boxes */
+            gap: 10px; /* Adds space between the boxes */
             width: 100%; /* Make sure the container takes full width */
             flex-wrap: wrap; /* Allows boxes to wrap if there's not enough space */
         }
@@ -38,6 +38,7 @@
             padding: 20px;
             font-size: 24pt;
             text-align: center;
+            border-radius: 20px;
         }
 
         .fox {
@@ -49,6 +50,7 @@
             padding: 10px; /* Increased padding for better appearance */
             font-size: 24pt;
             text-align: center;
+            border-radius: 20px;
         }
 
         .footer {
@@ -56,6 +58,31 @@
             text-align: center;
             top: 000px;
             width: 100%;
+        }
+
+        #submitImage {
+            background-color: #964B00;
+            color: white;
+            border: 2px solid black;
+            margin: auto;
+            width: 10vw; /* Adjusted for better side-by-side layout */
+            height: auto;
+            padding: 20px;
+            font-size: 24pt;
+            text-align: center;
+            border-radius: 20px;
+        }
+
+        .button-container {
+            background-color: #DFCAA0;
+            border: 2px solid black;
+            margin: auto;
+            width: 10vw; /* Adjusted for better side-by-side layout */
+            height: auto;
+            padding: 20px;
+            font-size: 24pt;
+            text-align: center;
+            border-radius: 20px;
         }
     </style>
     <style>
@@ -87,10 +114,13 @@
             <form id="ocrForm">
                 <label for="imageFile">Upload an Image:</label>
                 <input type="file" id="imageFile" accept="image/*" required>
-                <button id="submitImage" type="button">Submit</button>
             </form>
             <h2>OCR Result:</h2>
             <p id="ocrText">Your OCR result will appear here</p>
+        </div>
+
+        <div class="button-container box">
+            <button id="submitImage" type="button">Submit</button>
         </div>
 
         <div class = "box">
