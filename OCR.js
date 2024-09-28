@@ -7,7 +7,6 @@ async function processOCR(url) {
         await worker.terminate();
 
         let cleanedText = cleanRead(ret.data.text);
-        document.getElementById('ocrText').textContent = cleanedText;
         return cleanedText
     
 }

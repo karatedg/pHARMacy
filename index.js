@@ -22,12 +22,15 @@ async function runImageCheck(event) {
             console.log('Local Image URL:', imageUrl);  // This is the local URL for the image
 
             // You can use this URL in your OCR logic or display the image
-            document.getElementById('ocrText').textContent = "Processing image...";
+
+            const ocrText = document.getElementById('ocrText');
+            ocrText.textContent = "Processing image...";
             
             // Call your OCR function with the local image URL
             drugName1 = await processOCR(imageUrl);
 
             if (drugName1) {
+                ocrText.textContent = drugName1
                 console.log("Waiting for drug lookup")
                 drug1 = await getDrugData(drugName1);
             } else {
@@ -48,12 +51,14 @@ async function runImageCheck(event) {
             console.log('Local Image URL:', imageUrl2);  // This is the local URL for the image
 
             // You can use this URL in your OCR logic or display the image
-            document.getElementById('ocrText').textContent = "Processing image...";
+            const ocrText2 = document.getElementById('ocrText2');
+            ocrText2.textContent = "Processing image...";
             
             // Call your OCR function with the local image URL
             drugName2 = await processOCR(imageUrl2);
 
             if (drugName2) {
+                ocrText2.textContent = drugName2
                 console.log("Waiting for drug lookup")
                 drug2 = await getDrugData(drugName2);
                 console.log(drug2)
@@ -72,6 +77,12 @@ async function runImageCheck(event) {
 
         let conflict1 = runConflictCheck(drugName1, drug2);
         let conflict2 = runConflictCheck(drugName2, drug1);
+
+
+        if (conflict1 || conflict2) {
+            console.log("Conflict confirmed.");
+            document.getElementById('overlap-text').textContent = "Conflict detected.";
+        }
 
 
 }
