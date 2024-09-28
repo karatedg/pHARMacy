@@ -3,19 +3,14 @@
     src: url(Poppins-Regular.ttf);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: boder-box;
-    font-family: "Poppins", sans-serif;
-}
-
 body,
 html {
     background-color: #0000;
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
