@@ -1,10 +1,10 @@
 async function getActiveIngredients(drugName) {
-    const baseURL = 'https://api.fda.gov/drug/label.json'
-    const query = `search=active_ingredient:\"${drugName}\"`
+    const baseURL = 'https://api.fda.gov/drug/label.json?search=drug_interactions:'
+    const query = `${drugName}&count=openfda.substance_name.exact`
 
     try {
         console.log("Fetching data...");
-        const response = await fetch(`${baseURL}?${query}`);
+        const response = await fetch(`${baseURL}${query}`);
         
         if (!response.ok) {
             throw new Error(`Error in fetch`);
@@ -15,7 +15,7 @@ async function getActiveIngredients(drugName) {
         console.log(responseData)
         
         if (responseData) {
-            const returning = responseData.results[0].spl_product_data_elements[0];
+            const returning = responseData.results;
             console.log(returning)
             return returning;
         } else {
