@@ -13,6 +13,25 @@ html {
     scroll-behavior: smooth;
 }
 
+header {
+    background-color: black;
+    border-radius: 0 0 20px 20px;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+header img {
+    max-width: 200px;
+    height: auto;
+}
+
+
 .heading p {
     font-size: 48pt;
     color: #964B00;
