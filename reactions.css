@@ -121,7 +121,7 @@ header img {
     text-align: center;
 }
 
-.submitImage {
+.button-container {
     display: inline-block;
     padding: 12px 40px;
     background: #0056b3;
@@ -134,7 +134,7 @@ header img {
 
 }
 
-.submitImage:hover{
+.button-container:hover{
     background: #00457c;
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
