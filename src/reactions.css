@@ -3,41 +3,48 @@
     src: url(Poppins-Regular.ttf);
 }
 
-body,
-html {
-    background-color: #0000;
+html,
+body {
+    background-color: black;
     font-family: "Poppins", sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
-    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
+
+
 header {
-    background: black;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    position: flex;
+    background-color: black;
+    padding: 0;
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    border-bottom-left-radius: 120px;
-    border-bottom-right-radius: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 200px;
+    
     
 }
 
 header img {
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
+    width:100%;
+    height: 150%;
     object-position: center;
+    object-fit: cover;
+}
+
+body {
+    padding-top: 200px;
+}
+
+img.center{
+    text-align:center;
+    margin: 0 auto;
+    padding: 0px;
 }
 
 .heading p {
@@ -53,11 +60,13 @@ header img {
     gap: 10px; /* Adds space between the boxes */
     width: 100%; /* Make sure the container takes full width */
     flex-wrap: wrap; /* Allows boxes to wrap if there's not enough space */
+    padding-top: 80px;
 }
 
 .box {
-    background-color: #DFCAA0;
-    border: 2px solid black;
+    background-color: #333;
+    border: 2px solid #555;
+    color: #fff;
     margin: auto;
     width: 30vw; /* Adjusted for better side-by-side layout */
     height: auto;
@@ -68,8 +77,9 @@ header img {
 }
 
 .fox {
-    background-color: #DFCAA0;
-    border: 2px solid black;
+    background-color: #333;
+    border: 2px solid #555;
+    color: #fff;
     margin: auto;
     width: 63vw; /* Adjusted width */
     height: 32vw;
