@@ -170,7 +170,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-}
+
 .invisibleBox{
     background-color: transparent;
     border: 2px solid black;
