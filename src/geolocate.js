@@ -14,7 +14,7 @@ document.getElementById('getLocation').addEventListener('click', () => {
 
 function doSomething(lat, lon) {
     const output = `Latitude: ${lat}, Longitude: ${lon}`;
-    document.getElementById('output').textContent = output;
+    //document.getElementById('output').textContent = output;
 }
 
 function fetchNearbyHospitals(lat, lon) {

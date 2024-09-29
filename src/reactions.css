@@ -82,7 +82,6 @@ img.center{
 
 
 .box {
-    background-color: #333;
     border: 2px solid #555;
     color: #fff;
     margin: auto;
@@ -131,7 +130,7 @@ img.center{
 }
 
 #submitImage {
-    color: black;
+    color: white;
     border: 2px solid black;
     margin: auto;
     width: 10vw; /* Adjusted for better side-by-side layout */
@@ -159,6 +158,10 @@ img.center{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     text-decoration: none;
+}
+
+a:link {
+    color: #FFFFFF;
 }
 
 button {
