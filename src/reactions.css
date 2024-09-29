@@ -10,10 +10,15 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    flex-direction: column;
+    align-items:center;
     scroll-behavior: smooth;
 }
 
-
+.container {
+    display:flex;
+    justify-content: center;
+}
 
 header {
     background-color: black;
@@ -22,17 +27,15 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
-    
-    
+    overflow:hidden; 
 }
 
 header img {
     width:100%;
-    height: 150%;
+    height: 100%;
     object-position: center;
     object-fit: cover;
 }
@@ -53,38 +56,67 @@ img.center{
     text-align: center;
 }
 
-.container {
+/*.box {
+    border: 2px solid #555;
+    float: left;
+    width:50%;
+    flex-direction: row;
     display: flex;
-    flex-direction: row; /* Ensures horizontal alignment */
-    justify-content: space-between; /* Makes sure boxes are spaced evenly */
-    gap: 10px; /* Adds space between the boxes */
-    width: 100%; /* Make sure the container takes full width */
-    flex-wrap: wrap; /* Allows boxes to wrap if there's not enough space */
+}*/
+/*.container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    gap: 10px; 
+    width: 100%; 
+    flex-wrap: wrap; 
     padding-top: 80px;
+}*/
+
+* {
+    box-sizing: border-box
 }
+
 
 .box {
     background-color: #333;
     border: 2px solid #555;
     color: #fff;
     margin: auto;
-    width: 30vw; /* Adjusted for better side-by-side layout */
+    width: 50%; 
+    max-width: 500px;
     height: auto;
     padding: 20px;
-    font-size: 24pt;
+    font-size: 18pt;
     text-align: center;
     border-radius: 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    float: left;
+    display:flex;
 }
 
-.fox {
+.box h1 {
+    font-size: 20pt;
+    color: white;
+    text-align:center;
+}
+.box p {
+    font-size: 12pt;
+    color: white;
+    text-align:center;
+}
+
+.fox, .geolocation-box {
+    display: none;
     background-color: #333;
     border: 2px solid #555;
     color: #fff;
-    margin: auto;
+    width:90%;
+    margin-top: 20px;
     width: 63vw; /* Adjusted width */
-    height: 32vw;
-    padding: 10px; /* Increased padding for better appearance */
-    font-size: 24pt;
+    padding: 20px; /* Increased padding for better appearance */
+    font-size: 18pt;
     text-align: center;
     border-radius: 20px;
 }
@@ -111,15 +143,34 @@ img.center{
 .button-container {
 
     border: 2px solid black;
-    margin: auto;
-    width: 10vw; /* Adjusted for better side-by-side layout */
+    margin: 20px auto;
+    min-width: 150px;
+    max-width: 300px; 
+    width: auto;
     height: auto;
-    padding: 20px;
-    font-size: 24pt;
+    padding: 10px 30px;
     text-align: center;
-    border-radius: 20px;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+    border:none;
+    font-size:16 pt;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    text-decoration: none;
 }
 
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #0056b3;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+}
 .invisibleBox{
     background-color: transparent;
     border: 2px solid black;
@@ -131,9 +182,9 @@ img.center{
     text-align: center;
 }
 
-.button-container {
+/*.button-container {
     display: inline-block;
-    padding: 12px 40px;
+    padding: 10px 30px;
     background: #0056b3;
     color: #fff;
     text-decoration: none;
@@ -141,11 +192,12 @@ img.center{
     transition: background 0.3s ease, transform 0.3s ease;
     border: none;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-
-}
+*/
 
 .button-container:hover{
     background: #00457c;
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
+
+
