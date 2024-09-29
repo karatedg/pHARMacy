@@ -141,7 +141,6 @@ img.center{
 }
 
 .button-container {
-
     border: 2px solid black;
     margin: 20px auto;
     min-width: 150px;
@@ -171,11 +170,17 @@ button {
     transition: background-color 0.3s;
 }
 
+button:hover {
+    transform: translateY(-3px);
+    background-color: #0056b3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+}
+
 .invisibleBox{
     background-color: transparent;
     border: 2px solid black;
     margin: auto;
-    width: 30vw; /* Adjusted for better side-by-side layout */
+    width: 30vw; 
     height: auto;
     padding: 20px;
     font-size: 24pt;
@@ -194,10 +199,5 @@ button {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 */
 
-.button-container:hover{
-    background: #00457c;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-}
 
 
