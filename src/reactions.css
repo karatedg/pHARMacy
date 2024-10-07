@@ -87,7 +87,7 @@ img.center {
 }
 
 .box p {
-    font-size: 1.2vw; /* Adjusted to 1.2% of viewport width */
+    font-size: 2vw; /* Adjusted to 1.2% of viewport width */
     color: white;
     text-align: center;
 }
