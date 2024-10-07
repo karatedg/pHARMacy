@@ -126,7 +126,7 @@ img.center {
 
 .button-container {
     border: 2px solid black;
-    margin: 20px auto;
+    margin: auto;
     min-width: 150px;
     max-width: 300px; 
     width: auto;
