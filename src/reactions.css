@@ -116,12 +116,15 @@ img.center {
     color: white;
     border: 2px solid black;
     margin: auto;
-    width: 12vw; /* Adjusted to 12% of viewport width */
+    width: auto; /* Adjust width automatically */
+    max-width: 100%; /* Ensure the button does not exceed the screen width */
     height: auto;
-    padding: 2vw; /* Adjusted to 2% of viewport width */
-    font-size: 2.4vw; /* Adjusted to 2.4% of viewport width */
+    padding: 2vw; /* Adjust to screen size */
+    font-size: calc(1em + 1vw); /* Responsive font size */
     text-align: center;
-    border-radius: 2vw; /* Adjusted to 2% of viewport width */
+    border-radius: 2vw; /* Adjust to screen size */
+    box-sizing: border-box; /* Ensures padding stays inside the button */
+    word-wrap: break-word; /* Prevents text from overflowing */
 }
 
 .button-container {
