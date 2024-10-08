@@ -24,27 +24,27 @@
         <div> 
             <div class="box">
                 <h1>First Medication</h1>
-                <p style="text-align: center">Make sure your image is clear and legible before submitting for best results.</p>
+                <p style="text-align:center; font-size:1vw">Make sure your image is clear and legible before submitting for best results.</p>
                 <form id="ocrForm">
-                    <label for="imageFile">Upload an Image:</label>
+                    <label style = "font-size:1.7vw; font-weight:bold" for="imageFile">Upload an Image:</label>
                     <input type="file" id="imageFile" accept="image/*" required>
                 </form>
-                <h2>Medicine:</h2>
+                <p style = "font-size:2vw; font-weight:bold">Medicine:</p>
                 <p id="ocrText">Medication Name</p>
             </div>
         
-            <div id="button-special"class="button-container box">
+            <div id="button-special" class="button-container box">
                 <button id="submitImage" type="button">Submit</button>
             </div>
         
             <div class = "box">
                 <h1>2nd Medication</h1>
-                <p style="text-align: center">Make sure your image is clear and legible before submitting for best results.</p>
+                <p style="text-align: center;font-size:1vw">Make sure your image is clear and legible before submitting for best results.</p>
                 <form id="orcform2">
-                    <label for="imageFile">Upload an Image:</label>
+                    <label style = "font-size:1.7vw" for="imageFile">Upload an Image:</label>
                     <input type="file" id="imageFile2" accept="image/*" required>
                 </form>
-                <h2>Medicine:</h2>
+                <p style = "font-size:2vw; font-weight:bold">Medicine:</p>
                 <p id="ocrText2">Medication Name</p>
             </div>
         </div>
@@ -58,11 +58,11 @@
             </div>
 
             <div class="box">
-                <h1>Pharmacies Near You</h1>
-                <button id="getLocation">Get Location</button>
+                <p style = "font-size:2vw; font-weight:bold">Pharmacies Near You</p>
+                <button style = "font-size:2vw" id="getLocation">Get Location</button>
                 <p id="output"></p>
                 <div id="hospitals">
-                <h2>Nearby Pharmacies:</h2>
+                <p style = "font-size:2vw">Nearby Pharmacies:</p>
                     <ul id="hospitalList"></ul>
                 </div>
                 <script src="geolocate.js"></script>
